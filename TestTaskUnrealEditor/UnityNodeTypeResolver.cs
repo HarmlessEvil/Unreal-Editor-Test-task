@@ -28,6 +28,8 @@ namespace TestTaskUnrealEditor
                 switch (nodeEvent)
                 {
                     case MappingStart _:
+                        if (_nextMappingType == null) return false;
+                        
                         currentType = _nextMappingType;
                         return true;
 
